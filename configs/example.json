@@ -1,0 +1,48 @@
+{
+    "data_module_config": {
+        "data_dir": "/net/pr2/projects/plgrid/plggpolsl5/data/hanadi",
+        "batch_size": 16,
+        "num_workers": 8
+    },
+    "dataset": {
+        "df": "/net/pr2/projects/plgrid/plggpolsl5/data/hanadi/hanadi_splits.csv",
+        "folds_train": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "folds_val": [
+            "4"
+        ],
+        "folds_test": [
+            "test"
+        ],
+        "folds_pred": {
+            "test" : ["test"]
+        }
+    },
+    "model": {
+        "model_name" : "inception",
+        "activation" : "sigmoid",
+        "n_labels" : 1
+    },
+    "lit_model_params": {
+        "learning_rate": 3e-4,
+        "wd": 1e-4,
+        "onecycle": false
+    },
+    "trainer_params": {
+        "accumulate_grad_batches": 1,
+        "log_every_n_steps": 1,
+        "max_epochs": 35,
+        "detect_anomaly": true
+    },
+    "wandb_config": {
+        "entity": "phd-dk",
+        "project": "hanadi_training_v2"
+    },
+    "strategies": {
+        "weigh_classes": true
+    }
+}
