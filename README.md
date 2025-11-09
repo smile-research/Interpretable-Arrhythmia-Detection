@@ -25,17 +25,17 @@ They provide insight into how the AI focuses on specific waveform features when 
 ## Installation
 
 1. Clone the repository:
-   git clone <repo_url>
-   cd <repo_name>
+   `git clone git@github.com:smile-research/Interpretable-Arrhythmia-Detection.git`
+   `cd Interpretable-Arrhythmia-Detection`
 
 2. Install required dependencies:
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
 
 ## Running Inference
 
 Run model inference using a configuration file:
 
-   python inference.py --config_file ./configs/inference_config.json --output_dir ./outputs_inference
+   `python inference.py --config_file ./configs/inference_config.json --output_dir ./outputs_inference`
 
 Predictions are saved to the chosen output directory.
 
@@ -43,7 +43,7 @@ Predictions are saved to the chosen output directory.
 
 To generate explanations for model predictions:
 
-   python xai.py --config_file ./configs/xai_config.json --output_dir ./outputs_xai
+   `python xai.py --config_file ./configs/xai_config.json --output_dir ./outputs_xai`
 
 This script:
 - Loads the trained model (either from a checkpoint or a genetic programming structure).
@@ -51,7 +51,7 @@ This script:
 - Saves results and visualizations locally.
 
 ## Repository Structure
-
+```
 .
 ├── src/
 │   ├── data/                      - Data handling and preprocessing
@@ -64,7 +64,7 @@ This script:
 ├── xai.py                         - Script for generating explanations
 ├── requirements.txt               - Required Python packages
 └── README.md                      - This file
-
+```
 ## Key Components
 
 - **PhysionetDataModule** – Loads and prepares ECG datasets.  
