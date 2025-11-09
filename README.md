@@ -25,8 +25,10 @@ They provide insight into how the AI focuses on specific waveform features when 
 ## Installation
 
 1. Clone the repository:
-   `git clone git@github.com:smile-research/Interpretable-Arrhythmia-Detection.git`
-   `cd Interpretable-Arrhythmia-Detection`
+   ```
+   git clone git@github.com:smile-research/Interpretable-Arrhythmia-Detection.git
+   cd Interpretable-Arrhythmia-Detection
+   ```
 
 2. Install required dependencies:
    ```
