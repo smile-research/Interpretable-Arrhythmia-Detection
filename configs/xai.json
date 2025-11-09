@@ -1,0 +1,27 @@
+{
+    "data_module_config": {
+        "data_dir": "./base_path/data",
+        "batch_size": 64,
+        "num_workers": 64
+    },
+    "dataset": {
+        "df": "./configs/joined_splits.csv",
+        "folds_pred": {
+            "test" : [
+                "test_dataset1",
+                "test_dataset2",
+                "valid_dataset1",
+                "valid_dataset2"
+            ]
+        }
+    },
+    "wandb_config": {
+        "entity": "user",
+        "project": "project_to_upload_explanations_to"
+    },
+    "model": {
+        "architecture":"/giraffe/122.tree",
+        "project": "project"
+    }
+    
+}

@@ -1,25 +1,25 @@
 {
     "data_module_config": {
-        "data_dir": "/net/pr2/projects/plgrid/plggpolsl5/data/hanadi",
+        "data_dir": "./base_path/data/",
         "batch_size": 16,
         "num_workers": 8
     },
     "dataset": {
-        "df": "/net/pr2/projects/plgrid/plggpolsl5/data/hanadi/hanadi_splits.csv",
+        "df": "./configs/joined_splits.csv",
         "folds_train": [
-            "0",
-            "1",
-            "2",
-            "3"
+            "dataset1_0",
+            "dataset1_1",
+            "dataset1_2",
+            "dataset1_3"
         ],
         "folds_val": [
-            "4"
+            "dataset1_4"
         ],
         "folds_test": [
-            "test"
+            "dataset1_test"
         ],
         "folds_pred": {
-            "test" : ["test"]
+            "test" : ["dataset1_test"]
         }
     },
     "model": {
@@ -39,8 +39,8 @@
         "detect_anomaly": true
     },
     "wandb_config": {
-        "entity": "phd-dk",
-        "project": "hanadi_training_v2"
+        "entity": "user",
+        "project": "dataset1__training_v2"
     },
     "strategies": {
         "weigh_classes": true
