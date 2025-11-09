@@ -29,7 +29,10 @@ They provide insight into how the AI focuses on specific waveform features when 
    `cd Interpretable-Arrhythmia-Detection`
 
 2. Install required dependencies:
-   `pip install -r requirements.txt`
+   ```
+   pip install -r requirements.txt
+   git+https://github.com/Hryniewska/EnsembleXAI.git
+   ```
 
 ## Running Inference
 
@@ -43,7 +46,7 @@ Predictions are saved to the chosen output directory.
 
 To generate explanations for model predictions:
 
-   `python xai.py --config_file ./configs/xai_config.json --output_dir ./outputs_xai`
+   `python inference_with_xai.py --config_file ./configs/xai_config.json --output_dir ./outputs_xai`
 
 This script:
 - Loads the trained model (either from a checkpoint or a genetic programming structure).

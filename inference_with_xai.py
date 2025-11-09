@@ -35,9 +35,9 @@ import torchvision.transforms as transforms
 from time import time
 from skimage import graph, segmentation, color, filters
 
-from compact_xai.EnsembleXAI.Ensemble import normEnsembleXAI
-from compact_xai.EnsembleXAI.Normalization import second_moment_normalize
-from compact_xai.handlers import GiraffeHandler
+from EnsembleXAI.Ensemble import normEnsembleXAI
+from EnsembleXAI.Normalization import second_moment_normalize
+from handlers import GiraffeHandler
 
 from giraffe.inferece_tree import InferenceTree
 from giraffe.tree import Tree
